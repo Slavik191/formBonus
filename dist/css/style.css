@@ -1,0 +1,275 @@
+body, body .formContainer .infoSteps .infoStepsSlider .infoStepsSliderImages, body .formContainer .form, body .formContainer .form .switchSteps, body .formContainer .form .switchSteps .switchStep {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+body .formContainer .infoSteps .infoStepsSlider .infoStepsSliderImages .text, body .formContainer .form form, body .formContainer .form form .formStep, body .formContainer .form form .formStep .lastStepText {
+  display: flex;
+  flex-direction: column; }
+
+body {
+  height: 100vh;
+  margin: 0; }
+  body .formContainer {
+    display: flex;
+    position: relative;
+    width: 950px;
+    height: 500px; }
+    body .formContainer .warning {
+      position: absolute;
+      right: -155px;
+      top: 130px;
+      color: #EB5757;
+      font-weight: 900;
+      transform: rotate(90deg); }
+    body .formContainer .infoSteps, body .formContainer .form {
+      width: 50%; }
+    body .formContainer .infoSteps {
+      overflow: hidden; }
+      body .formContainer .infoSteps .infoStepsSlider {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: 1s; }
+        body .formContainer .infoSteps .infoStepsSlider .infoStepsSliderImages {
+          position: relative;
+          width: 100%;
+          height: 100%; }
+          body .formContainer .infoSteps .infoStepsSlider .infoStepsSliderImages .text {
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 70px;
+            font-size: 32px;
+            color: white;
+            font-weight: 900; }
+          body .formContainer .infoSteps .infoStepsSlider .infoStepsSliderImages img {
+            width: 100%;
+            height: 100%; }
+    body .formContainer .form {
+      position: relative;
+      border: 2px solid #FD6E20;
+      border-left: 0;
+      border-radius: 0 0 80px 0; }
+      body .formContainer .form .switchSteps {
+        justify-content: space-between;
+        position: absolute;
+        width: 300px;
+        top: -32px; }
+        body .formContainer .form .switchSteps .switchStep {
+          width: 75px;
+          font-size: 25px;
+          border: 1px solid #FF6E20;
+          border-bottom: 0; }
+          body .formContainer .form .switchSteps .switchStep:first-child {
+            border: 2px solid #FF6E20;
+            border-bottom: 2px solid #fff; }
+      body .formContainer .form form {
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        height: 100%; }
+        body .formContainer .form form .nextButton0 {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          color: #fff;
+          border: 1px solid #FF6E20;
+          font-weight: 900;
+          font-size: 20px;
+          width: 384px;
+          height: 40px;
+          margin: 0 auto;
+          background: #FF6E20;
+          transition: .3s; }
+          body .formContainer .form form .nextButton0:hover {
+            background: #FFB78F; }
+          body .formContainer .form form .nextButton0:active {
+            color: #FF6E20;
+            background: #fff; }
+        body .formContainer .form form .nextButton1 {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          color: #fff;
+          border: 1px solid #D77B00;
+          font-weight: 900;
+          font-size: 20px;
+          width: 384px;
+          height: 40px;
+          margin: 0 auto;
+          background: #D77B00;
+          transition: .3s; }
+          body .formContainer .form form .nextButton1:hover {
+            background: #EBBD80; }
+          body .formContainer .form form .nextButton1:active {
+            color: #D77B00;
+            background: #fff; }
+        body .formContainer .form form .nextButton2 {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          color: #fff;
+          border: 1px solid #E93A29;
+          font-weight: 900;
+          font-size: 20px;
+          width: 384px;
+          height: 40px;
+          margin: 0 auto;
+          background: #E93A29;
+          transition: .3s; }
+          body .formContainer .form form .nextButton2:hover {
+            background: #F39B93; }
+          body .formContainer .form form .nextButton2:active {
+            color: #E93A29;
+            background: #fff; }
+        body .formContainer .form form .formSteps {
+          display: flex;
+          position: relative;
+          left: 0;
+          transition: 1s; }
+        body .formContainer .form form .formStep {
+          justify-content: center;
+          align-items: center;
+          padding: 0px 31px; }
+          body .formContainer .form form .formStep .lastStepText {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 24px; }
+            body .formContainer .form form .formStep .lastStepText span:last-child {
+              font-size: 16px; }
+          body .formContainer .form form .formStep .licenseAgreement {
+            font-size: 12px;
+            color: #333333; }
+          body .formContainer .form form .formStep .field {
+            position: relative; }
+            body .formContainer .form form .formStep .field span {
+              position: absolute;
+              bottom: 0;
+              left: 15px;
+              font-size: 13px;
+              color: red;
+              opacity: 0;
+              transition: .3s; }
+            body .formContainer .form form .formStep .field .danger {
+              position: absolute;
+              top: 18px;
+              right: -20px;
+              width: 32px;
+              height: 32px;
+              background: url("https://png.pngtree.com/svg/20170914/hidden_danger_1392698.png") no-repeat;
+              background-size: cover;
+              opacity: 0;
+              transition: .3s; }
+          body .formContainer .form form .formStep .radioContainer {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 35px; }
+            body .formContainer .form form .formStep .radioContainer .radio {
+              width: 50%;
+              margin-left: 15px; }
+          body .formContainer .form form .formStep input[type='text'], body .formContainer .form form .formStep input[type='password'] {
+            width: 384px;
+            height: 40px;
+            font: 20px Arial;
+            border: 1px solid #FFB78F;
+            box-sizing: border-box;
+            padding: 5px;
+            background-color: #FFB78F;
+            transition: border-color .1s linear;
+            position: relative;
+            z-index: 2;
+            margin: 15px; }
+            body .formContainer .form form .formStep input[type='text']::-webkit-input-placeholder, body .formContainer .form form .formStep input[type='password']::-webkit-input-placeholder {
+              transition: .5s;
+              font-size: 15px;
+              color: #333333; }
+            body .formContainer .form form .formStep input[type='text']:-moz-placeholder, body .formContainer .form form .formStep input[type='password']:-moz-placeholder {
+              transition: .5s;
+              font-size: 15px;
+              color: #333333; }
+            body .formContainer .form form .formStep input[type='text']::-moz-placeholder, body .formContainer .form form .formStep input[type='password']::-moz-placeholder {
+              transition: .5s;
+              font-size: 15px;
+              color: #333333; }
+            body .formContainer .form form .formStep input[type='text']:-ms-input-placeholder, body .formContainer .form form .formStep input[type='password']:-ms-input-placeholder {
+              transition: .5s;
+              font-size: 15px;
+              color: #333333; }
+            body .formContainer .form form .formStep input[type='text']:focus, body .formContainer .form form .formStep input[type='password']:focus {
+              outline: none;
+              border-color: #FE6E20; }
+              body .formContainer .form form .formStep input[type='text']:focus::-webkit-input-placeholder, body .formContainer .form form .formStep input[type='password']:focus::-webkit-input-placeholder {
+                font-size: 10px; }
+              body .formContainer .form form .formStep input[type='text']:focus:-moz-placeholder, body .formContainer .form form .formStep input[type='password']:focus:-moz-placeholder {
+                font-size: 10px; }
+              body .formContainer .form form .formStep input[type='text']:focus::-moz-placeholder, body .formContainer .form form .formStep input[type='password']:focus::-moz-placeholder {
+                font-size: 10px; }
+              body .formContainer .form form .formStep input[type='text']:focus:-ms-input-placeholder, body .formContainer .form form .formStep input[type='password']:focus:-ms-input-placeholder {
+                font-size: 10px; }
+          body .formContainer .form form .formStep:nth-child(2) input {
+            background-color: #EBBD80; }
+            body .formContainer .form form .formStep:nth-child(2) input:focus {
+              border-color: #D77B00; }
+          body .formContainer .form form .formStep:last-child input {
+            background-color: #F39B93; }
+            body .formContainer .form form .formStep:last-child input:focus {
+              border-color: #E93A29; }
+          body .formContainer .form form .formStep input[type='radio'], body .formContainer .form form .formStep input[type='checkbox'] {
+            display: none; }
+          body .formContainer .form form .formStep input[type='radio'] + label:before {
+            content: "\26AB";
+            border: 1px solid #000;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid #C4C4C4;
+            background: #C4C4C4;
+            color: #FFB78F;
+            font-size: 0;
+            line-height: 21px;
+            margin: -5px 5px 0 0;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            vertical-align: middle;
+            transition: font-size ease .3s; }
+          body .formContainer .form form .formStep input[type='radio']:checked + label:before {
+            font-size: 25px; }
+          body .formContainer .form form .formStep input[type='checkbox'] + label:before {
+            content: "\2713";
+            color: transparent;
+            display: inline-block;
+            border: 1px solid #C4C4C4;
+            background: #C4C4C4;
+            font-size: 16px;
+            line-height: 16px;
+            margin: -5px 5px 0 0;
+            height: 15px;
+            width: 15px;
+            text-align: center;
+            vertical-align: middle;
+            transition: color ease .3s; }
+          body .formContainer .form form .formStep input[type=checkbox]:checked + label:before {
+            color: #FFB78F; }
+          body .formContainer .form form .formStep .error > span {
+            opacity: 1; }
+          body .formContainer .form form .formStep .error > input {
+            border: 1px solid  #EB5757; }
+          body .formContainer .form form .formStep .error > .danger {
+            opacity: 1; }
+          body .formContainer .form form .formStep .checkBoxContainer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: calc(100% - 30px);
+            margin: 15px; }
+            body .formContainer .form form .formStep .checkBoxContainer span {
+              bottom: -15px;
+              left: 0; }
+
+/*# sourceMappingURL=style.css.map*/

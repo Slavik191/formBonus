@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body>
+    <main class='formContainer'>
+        <span class='warning'>Все поля обязательны для заполнения</span>
+        <div class='infoSteps' id='infoSteps'>
+            <div class='infoStepsSlider' id='infoStepsSlider'>
+                <div class='infoStepsSliderImages'>
+                    <div class='text'>
+                        <span>Всего три простых шага</span>
+                        <span>для получения бонусов</span>
+                    </div>
+                    <img src="https://s3-alpha-sig.figma.com/img/91e8/4e05/a65ad800726affb549bb2261051eabba?Expires=1544400000&Signature=FuK3OROPgvA2g-cr9xGfY8OJfq-G~WBi9~HSJwqZ9fX6GO27lrWobwgKlt8TiLWoTpBiv4qVaidd96tkAtFUU5HLUp9X8~CDa9VqBN60Yoda-TqD1a-4lHUU7vGsNh64onKJONisbUdPHy6mmhqlGjj2Pz~OUe1C45ISi2ftvKZ-6mTJYiwmLjmbCQNzMWg4m4mDBk4AtTI7yX3Ul311Oh-DM15T~ubZImDi2cD-ck7bxQGaPWKCOHDils6H9oUbwN9r7vgue3Zj0AcVVZp-iA3Vr-nWc6KiUJcY30J2pso6ToFw6jH69NVp8dEYDuwCuaPX~SEcU2uTTumJF34AiQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+                </div>
+                <div class='infoStepsSliderImages'>
+                    <div class='text'>
+                        <span>Половина пути уже</span>
+                        <span>пройдена</span>
+                    </div>
+                    <img src="https://s3-alpha-sig.figma.com/img/161c/7735/e3f0d7ef066cc06760af542ccffb70a6?Expires=1544400000&Signature=RHPhsQf7JMFFaJzoFU5qKn6ZhtIFgfI-wwD1JQIjC30CJWJoxyJEKRFeu~L~3efROCqdry9qfFHRyUl4YSKfvxShPVqZYlIzevw-xrz1bZCU01GPhHAnJ3aWO~N~Ujo9-FG7EXCuAAvoPQBaOxFdHcf40Gb5gjrOCmfHsrZ8zvbN-W~q9Px8N1DXXVKQ5mx1rca9UB7ovkGu5qddPZVM5FcwJKVjwLy1xC92NIvOwt89BqDKoqb0I5dqamp9NY1f3WbXnmRLJJwXC4XhhyVGjyvbcIs-XBeay7368jMTHwZQOE-glo9XbsCZdbOGcAMZJ42jjh-yEBV7R1eFs3FQ4A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+                </div>
+                <div class='infoStepsSliderImages'>
+                    <div class='text'>
+                        <span>Осталось совсем</span>
+                        <span>чуть-чуть</span>
+                    </div>
+                    <img src="https://s3-alpha-sig.figma.com/img/57c8/10af/a34f5693bcd552ab00c21dd8f968f812?Expires=1544400000&Signature=SVVzDtVYElhyn0d47ALJhQpdIei8ZndtX1DaxSYYCdrSWO0XxANt6pn4xDlMjatmgANmZWqSrrPDnxMXscLWj52SV5A2ul0psW34cfZxore-iIMTie7FtgKTMMafHpXbrJP0VUy1NrQHboke4JfNTgeE7iZWlDqry6PIoTQ9WYdRC84zCrR7-qXbw~IJJWMIKkZhCa9gPlG~8AG8H64Ui0EoT2dcmwnkkpap61ihVKK-Gn1eaBfOBAfwEy8x3MAy1jzp~tovc~gmUqgIfuOEgw27X0AE-8-MH5GQNpvnmaAIsu14eoUrquWfI1K4kdUj953nKMwTbNrKCvEPZR2rbg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+                </div>
+            </div>
+        </div>
+        <div class='form' id='form'>
+            <div class='switchSteps'>
+                <div class='switchStep'>1</div>
+                <div class='switchStep'>2</div>
+                <div class='switchStep'>3</div>
+            </div>
+            <form>
+                <div class='formSteps' id='formSteps'>
+                    <div class='formStep'>
+                        <div class='field'>
+                            <input type='text' id='name' placeholder="Имя" />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class='field'>
+                            <input type='text' id='surname' placeholder="Фамилия" />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class='field'>
+                            <input type='text' id='patronymic' placeholder="Отчество" />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class=radioContainer>
+                            <div class='radio'>
+                                <input type="radio" id="men" name='gender' value='мужчина' checked>
+                                <label for="men">Мужчина</label>
+                            </div>
+                            <div class='radio'>
+                                <input type="radio" id="women" name='gender' value='женщина'>
+                                <label for="women">Женщина</label>
+                            </div>
+                        </div>
+                        <div class='field'>
+                            <input type='text' id='dateBirth' placeholder="Дата рождения" />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class = 'field checkBoxContainer'>
+                            <input type="checkbox" id="licenseAgreement" name="check1" value = 'licenseAgreement'/>
+                            <label for="licenseAgreement" class = 'licenseAgreement'>Соглашаюсь с учловиями участия</label>
+                            <span>подтвердите соглашение</span>
+                        </div>
+                    </div>
+                    <div class='formStep'>
+                        <div class='field'>
+                            <input type='text' id='number' placeholder='номер' />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class='field'>
+                            <input type='text' id='email' placeholder='email' />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class='field'>
+                            <input type='password' id='password' placeholder='пароль' />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                        <div class='field'>
+                            <input type='password' id='repeatPassword' placeholder='повторите пароль' />
+                            <span>Неверные данные</span>
+                            <div class='danger'></div>
+                        </div>
+                    </div>
+                    <div class='formStep'>
+                        <div class='lastStepText'>
+                            <span>На номер <span id='lastStepTextNumber'></span></span>
+                            <span>Отправлен код подеверждения</span>
+                            <span>Введите его в поле ниже</span>
+                        </div>
+                        <div class='field'>
+                            <input type='text' id='code' placeholder='код' />
+                            <span>Неверный код</span>
+                            <div class='danger'></div>
+                        </div>
+                    </div>
+                </div>
+                <div id='next' class='nextButton0'>
+                    <span id='nextText'>Продолжить</span>                    
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

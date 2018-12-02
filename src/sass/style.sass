@@ -1,0 +1,303 @@
+%flexOne
+    display: flex
+    justify-content: center
+    align-items: center
+
+%flexTwo
+    display: flex
+    flex-direction: column
+
+@mixin placeholder 
+    &::-webkit-input-placeholder 
+        @content 
+    &:-moz-placeholder           
+        @content
+    &::-moz-placeholder          
+        @content
+    &:-ms-input-placeholder     
+        @content
+
+@mixin button($color, $colorHover)
+    display: flex
+    justify-content: space-around
+    align-items: center
+    color: #fff
+    border: 1px solid $color
+    font-weight: 900
+    font-size: 20px
+    width: 384px
+    height: 40px
+    margin: 0 auto
+    background: $color
+    transition: .3s
+
+    &:hover
+        background: $colorHover
+    
+    &:active
+        color: $color
+        background: #fff
+
+    
+
+
+    
+body 
+    @extend %flexOne
+    height: 100vh
+    margin: 0
+
+    .formContainer 
+        display: flex
+        position: relative
+        width: 950px
+        height: 500px
+
+        .warning
+            position: absolute
+            right: -155px
+            top: 130px
+            color: #EB5757
+            font-weight: 900
+            transform: rotate(90deg)
+
+        .infoSteps, .form
+            width: 50%
+
+        .infoSteps
+            overflow: hidden
+
+            .infoStepsSlider
+                display: flex
+                flex-wrap: wrap
+                height: 100%
+                position: relative
+                top: 0
+                left: 0
+                transition: 1s
+
+                .infoStepsSliderImages
+                    @extend %flexOne
+                    position: relative
+                    width: 100%
+                    height: 100% 
+
+                    .text 
+                        @extend %flexTwo                        
+                        justify-content: center
+                        align-items: center
+                        position: absolute
+                        top: 70px
+                        font-size: 32px
+                        color: white
+                        font-weight: 900                        
+
+                    img
+                        width: 100%
+                        height: 100%                    
+
+        .form
+            @extend %flexOne
+            position: relative
+            border: 2px solid #FD6E20
+            border-left: 0
+            border-radius: 0 0 80px 0
+
+            .switchSteps
+                @extend %flexOne
+                justify-content: space-between
+                position: absolute
+                width: 300px
+                top: -32px                              
+
+                .switchStep
+                    @extend %flexOne
+                    width: 75px
+                    font-size: 25px
+                    border: 1px solid #FF6E20
+                    border-bottom: 0
+
+                    &:first-child
+                        border: 2px solid #FF6E20
+                        border-bottom: 2px solid #fff
+
+
+            form 
+                @extend %flexTwo
+                justify-content: center                
+                overflow: hidden
+                width: 100%
+                height: 100%
+
+                .nextButton0
+                    @include button(#FF6E20, #FFB78F)
+
+                .nextButton1
+                    @include button(#D77B00, #EBBD80)  
+
+                .nextButton2
+                    @include button(#E93A29,#F39B93)                                   
+
+
+                .formSteps
+                    display: flex
+                    position: relative
+                    left: 0
+                    transition: 1s
+
+                .formStep
+                    @extend %flexTwo 
+                    justify-content: center
+                    align-items: center
+                    padding: 0px 31px
+
+                    .lastStepText
+                        @extend %flexTwo
+                        justify-content: center
+                        align-items: center
+                        margin-bottom: 25px                       
+                        font-size: 24px
+
+                        span:last-child
+                            font-size: 16px
+
+                    .licenseAgreement
+                        font-size: 12px
+                        color: #333333
+
+                    .field
+                        position: relative  
+                        
+                        span                            
+                            position: absolute
+                            bottom: 0
+                            left: 15px
+                            font-size: 13px
+                            color: red 
+                            opacity: 0
+                            transition: .3s
+
+                        .danger                                                        
+                            position: absolute
+                            top: 18px
+                            right: -20px
+                            width: 32px
+                            height: 32px
+                            background: url('https://png.pngtree.com/svg/20170914/hidden_danger_1392698.png') no-repeat                     
+                            background-size: cover
+                            opacity: 0
+                            transition: .3s
+
+                    
+
+                    .radioContainer
+                        display: flex
+                        align-items: center
+                        width: 100% 
+                        height: 35px                      
+
+                        .radio 
+                            width: 50%
+                            margin-left: 15px
+                            
+                            
+
+
+                    input[type = 'text'], input[type = 'password']
+                        width: 384px
+                        height: 40px    
+                        font: 20px Arial                        
+                        border: 1px solid #FFB78F
+                        box-sizing: border-box
+                        padding: 5px
+                        background-color: #FFB78F                        
+                        transition: border-color .1s linear
+                        position: relative
+                        z-index: 2 
+                        margin: 15px
+                        @include placeholder 
+                                transition: .5s 
+                                font-size: 15px 
+                                color: #333333                                                                                 
+
+                        &:focus 
+                            outline: none
+                            border-color: #FE6E20 
+                            @include placeholder 
+                                font-size: 10px
+                    
+                    &:nth-child(2) input
+                        background-color: #EBBD80
+
+                        &:focus
+                            border-color: #D77B00
+                    
+                    &:last-child input
+                        background-color: #F39B93
+
+                        &:focus
+                            border-color: #E93A29  
+
+                    input[type='radio'], input[type='checkbox']
+                        display: none
+
+                    input[type='radio'] + label:before 
+                        content: "\26AB"
+                        border: 1px solid #000
+                        border-radius: 50%
+                        display: inline-block
+                        border: 1px solid #C4C4C4
+                        background: #C4C4C4
+                        color: #FFB78F
+                        font-size: 0  
+                        line-height: 21px
+                        margin: -5px 5px 0 0
+                        height: 20px
+                        width: 20px
+                        text-align: center
+                        vertical-align: middle
+                        transition: font-size ease .3s
+                    
+                    input[type='radio']:checked + label:before 
+                        font-size: 25px                    
+
+                    input[type='checkbox'] + label:before 
+                        content: "\2713"
+                        color: transparent
+                        display: inline-block
+                        border: 1px solid #C4C4C4
+                        background: #C4C4C4
+                        font-size: 16px
+                        line-height: 16px
+                        margin: -5px 5px 0 0
+                        height: 15px
+                        width: 15px
+                        text-align: center
+                        vertical-align: middle
+                        transition: color ease .3s                    
+
+                    input[type=checkbox]:checked + label:before 
+                        color: #FFB78F
+                    
+
+                    .error > span
+                        opacity: 1
+                    
+                    .error > input
+                        border: 1px solid  #EB5757 
+
+                    .error > .danger
+                        opacity: 1
+
+                    .checkBoxContainer                        
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        width: calc(100% - 30px)
+                        margin: 15px
+                        
+                        span
+                            bottom: -15px
+                            left: 0                                                
+
+
